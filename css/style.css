@@ -1,13 +1,13 @@
 :root {
   --spacing: 10px;
   --blur: 0px;
-  --base: #ff00b5;
+  --base: #5eff00;
 }
 .css-variables h2 {
-  text-shadow: 0 0 5px #ff00b5;
+  text-shadow: 0 0 5px #ff0000;
 }
 .controls label {
-  text-shadow: 0 0 5px #ff00b5;
+  text-shadow: 0 0 5px #0026ff;
 }
 img {
   padding: var(--spacing);
