@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Bai CARO</title>
+    <link rel="stylesheet" href="../css/jslap06bai2.css">
+</head>
+<body>
+    <table align="center">
+        <tr>
+            <td><button></button></td>
+            <td><button></button></td>
+            <td><button></button></td>
+        </tr>
+
+        <tr>
+            <td><button></button></td>
+            <td><button></button></td>
+            <td><button></button></td>
+        </tr>
+
+        <tr>
+            <td><button></button></td>
+            <td><button></button></td>
+            <td><button></button></td>
+        </tr>
+    </table>
+
+
+<script> var buttons = document.querySelectorAll('button');
+flag = true; //true laf x, false 0 
+buttons.forEach(b => {
+    b.onclick = function(){
+        if (flag){
+            b.innerHTML = 'X';
+            b.style.background = 'yellow';
+            b.disabled = true;
+            flag = !flag;
+        }
+        else{
+            b.innerHTML='0';
+            b.style.background = 'aqua';
+            b.disabled = true
+            flag = !flag;
+        }
+    }
+})
+
+</script>
+
+</body>
+</html>

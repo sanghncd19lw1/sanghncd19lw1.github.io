@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Js Lap07 Bài 3</title>
+</head>
+<body>
+    <h2> Form Đăng Ký </h2>
+    <form onsubmit="return kiem_tra()">
+        <p>
+            <label> Họ </label>
+            <input type="text" id="ho"/>
+
+        </p>
+
+        <p>
+            <label> Tên </label>
+            <input type="text" id="ten"/>
+
+        </p>
+
+        <p>
+            <label> Ngày Sinh: </label>
+            <label> Ngày </label><input type="number" id="ngay" min="1" max="31" required>
+            <label> Tháng </label><input type="number" id="thang" min="1" max="12" required>
+            <label> Năm </label><input type="number" id="nam" min="1990" max="2021" required>
+        </p>
+
+        <p>
+            <label>  Giới tính: </label>
+            <input type="radio" name="gioitinh" onclick="sex(this)"/> Nam
+            <input type="radio" name="gioitinh" onclick="sex(this)"/> Nữ
+        </p>
+
+        <p>
+            <label> Số Điện Thoại </label>
+            <input id="sdt" type="number"/>
+
+        </p>
+
+        <p id="so_thich">
+            <label> Sở Thích : </label>
+            <input type="checkbox" id="ds" />Đọc sách
+            <input type="checkbox" id="da_bong" />Đá bóng 
+            <input type="checkbox" id="xem_phim" />Xem phim
+            <input type="checkbox" id="may_va"  />May vá
+            <input type="checkbox" id="nghe"/>Nghe
+            <input type="checkbox" id="khac"/>Khác
+        </p>
+        
+        <hr/>
+
+        <button > Đăng Ký </button>
+    </form>
+
+
+    <script>
+        function kiem_tra(){
+            var firstname = document.querySelector('#ho').value;
+            if (firstname.length==0){
+                alert ("Kì ta, người gì mà không có họ ");
+                return false;
+            }
+
+            var lastname = document.querySelector('#ten').value;
+            if (lastname.length==0){
+                alert ("Chưa nhập Tên ");
+                return false;
+            }
+
+            var phonenumber =document.querySelector('#sdt').value;
+            if (phonenumber.length == 0){
+                alert ("Chưa nhập số điện thoại");
+                return false;
+            }
+
+            
+        }
+
+    </script>
+</body>
+</html>

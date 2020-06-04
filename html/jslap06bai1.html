@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Lap 06 Bài 1</title>
+    <link rel="stylesheet" href="">
+</head>
+<body>
+    <label id="pro" data-price="1950">iPhone 9</label>
+    <input id="qty" type="number" />
+    <button>OK</button>
+    <hr />
+    <h3>Name: <span id="name">?</span></h3>
+    <h3>Amount: <span id="amount">?</span></h3>
+
+    <script>
+    document.querySelector('button').onclick = function(){
+        document.querySelector('#name').innerHTML = document.querySelector('#pro').innerHTML;
+        var price = document.querySelector('#pro').dataset.price;
+        var quy = document.querySelector('#qty').value;
+        document.querySelector('amount').innerHTML = price*quy;
+    
+    }
+    </script>
+    
+</body>
+</html>
