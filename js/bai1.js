@@ -1,6 +1,6 @@
 //Trình chiếu Slideshow
 
-// Đầu tiên ta khởi taok biến index = 0 để khi nhấn vào nút next thì nó sẽ chạy cái slide tiếp theo
+// Đầu tiên ta khởi tạo biến index = 0 để khi nhấn vào nút next thì nó sẽ chạy cái slide tiếp theo
 let index = 0;
 showAuto();
 
@@ -13,7 +13,7 @@ show(index);
 
 // Ta tạo hàm cho slide thông qua lớp Slide sau đó ta lấy hết những gì đã tham chiếu
 // vào 1 biến mới nếu thỏa với điều kiện tham chiếu đó thì giá trị của index trừ đi  1
-// Vậy slide này sẽ được trừ đi 1 khi nhấn vào nút next
+// Vậy slide này sẽ được trừ đi 1 khi nhấn vào nút prev
 
 function show(Index) {
 let slides = document.querySelectorAll(".Slide"); 
