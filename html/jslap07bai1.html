@@ -6,6 +6,30 @@
     <title> Js Lap07 Bài 2 </title>
 </head> 
 <body>
-    
+    <div class="photo">
+        <h1> Bai 01 Lap 7</h1>
+        <img src="../img/0.JPG">
+    </div>
+
+    <script>
+        const first =document.querySelector("div.photo img");
+        console.log(first);
+
+        first.addEventListener("mouseover", function(event){
+            first.src="../img/1.JPG";
+        }
+        );
+
+        first.addEventListener("mouseout", function(event){
+            first.src="../img/0.JPG";
+        });
+
+        first.addEventListener("click", function (event){
+            first.src ="../img/2.JPG";
+        });
+        
+    </script>
 </body>
+
+
 </html>

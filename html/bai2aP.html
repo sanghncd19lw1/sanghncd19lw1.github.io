@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bài 2 P</title>
+<style>
+  
+#form{
+    width: 35%;
+    border: 1px solid black;
+    margin: auto; 
+    border-radius: 20px;
+    padding: 7px;
+    background-color: rgba(0, 255, 255, 0.411);
+}
+h2{
+    text-align: center;
+}
+label,select,option{
+    font-weight: bold;
+}
+input[type=text],input[type=email],select,textarea,#sex,#sothich{
+    width: 95%;
+    padding: 7px;
+    border-radius: 5px;
+    border: 1px solid black;
+    background-color:white;
+}
+.container{
+    padding: 3px;
+    width: 90%;
+    margin: auto;
+}
+button{
+    background-color: rgba(0, 0, 255, 0.377);
+    color: white;
+    font: 20px bold;
+    border-radius: 5px;
+    padding: 10px;
+    margin-top: 10px;
+    width: 40%;
+    margin-left: 58%;
+}
+.error{
+    color: red;
+    font-style: italic;
+}
+</style>
+
+</head>
+<body>
+  <form action="/action_page.php" onsubmit="return Dangky()">
+    <h2>ĐĂNG KÝ THÀNH VIÊN</h2>
+    <div class="container">
+      <label>Mã sinh viên</label><br>
+      <input id="msv" type="text" name="msv"><br>
+      <span id="errorMaso" class="error"></span><br>
+
+      <label>Họ và tên</label><br>
+      <input type="text" id="name"><br>
+      <span id="errorHoten" class="error"></span><br>
+
+      <label>Email</label><br>
+      <input type="email" id="email"><br>
+      <span id="errorEmail" class="error"></span><br>
+
+      <label for="sex">Giới tính</label><br>
+      <div id="sex">
+        <input type="radio" id="male" name="gender" value="1">
+        <label for="male">Nam</label>
+        <input type="radio" id="female" name="gender" value="0">
+        <label for="female">Nữ</label>
+      </div>
+      <span id="errorSex" class="error"></span><br>
+    
+      <label >Sở thích</label><br>
+      <div id="sothich">
+        <input type="checkbox" id="book" value="book">
+        <label for="book" > Đọc sách</label>
+        
+        <input type="checkbox" id="travel" value="travel">
+        <label for="travel"> Du lịch</label>
+
+        <input type="checkbox" id="music" value="music">
+        <label for="music"> Âm nhạc</label>
+
+        <input type="checkbox" id="cook" value="cook">
+        <label for="cook"> Ẩm thực</label>
+
+        <input type="checkbox" id="other" value="other">
+        <label for="other"> Khác</label>
+      </div>
+      <span id="errorHobby" class="error"></span><br>
+      <div id="check_other" style="display: none;">
+        <input type="text" placeholder="Hãy nhập sở thích khác">
+      </div><br>
+      
+
+      <label for="quoctich">Quốc tịch</label><br>
+      <select id="quoctich">
+        <option value="Viet">Việt Nam</option>
+        <option value="Anh">Anh</option>
+        <option value="USA">Mỹ</option>
+        <option value="Frane">Pháp</option>
+        <option value="JP">Nhật Bản</option>
+      </select><br>
+      
+      <label for="note">Ghi chú</label><br>
+      <textarea id="note" rows=4></textarea><br>
+      <span id="errorNote" class="error"></span>
+
+      <div>    
+        <button type="submit" onclick="Dangky(); return false">Đăng Ký</button>
+    </div>
+  </div>
+</form>
+</div>
+<script>
+function Dangky(){
+  // Kiểm tra mã sinh viên
+  let maso = document.getElementById("msv");
+      ms = maso.value; //gán biến cho maso
+  if (ms == "" ){
+    document.getElementById("errorMaso").innerHTML = "Mã số không được trống";
+    maso.style.border = "1px solid red";
+    maso.style.backgroundColor = "yellow"; 
+    }
+    else if(ms.length != 10){
+      document.getElementById("errorMaso").innerHTML = "Mã số phải có 10 số ";
+      maso.style.border = "1px solid red";
+      maso.style.backgroundColor = "yellow";
+    }
+    else{
+    document.getElementById("errorMaso").innerHTML = "";
+    maso.style.border = "1px solid black";
+    maso.style.backgroundColor = "white";
+  }
+  // Kiểm tra họ và tên
+  let hoten = document.getElementById("name");    
+      ht = hoten.value; // gán biến cho hoten
+  if (ht == ""){
+    document.getElementById("errorHoten").innerHTML = "Họ tên không được trống";
+    hoten.style.border = "1px solid red";
+    hoten.style.backgroundColor = "yellow";
+    }
+  else if(ht.length >50  || ht.length <= 2){
+    document.getElementById("errorHoten").innerHTML = "Họ tên phải trên 2 ký tự và dưới 50 ký tự";
+    hoten.style.border = "1px solid red";
+    hoten.style.backgroundColor = "yellow";
+  }  
+  else{
+    document.getElementById("errorHoten").innerHTML = "";
+    hoten.style.border = "1px solid black";
+    hoten.style.backgroundColor = "white";
+  }
+  // Kiểm tra email
+  let mail = document.getElementById("email");
+      ktmail = mail.value; // gán biến cho mail
+      var txtmail = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/; //biến kiểm tra định dạng email
+  if (ktmail == ""){
+    document.getElementById("errorEmail").innerHTML = "Email không được trống ";
+    mail.style.border = "1px solid red";
+    mail.style.backgroundColor = "yellow";
+    }
+    else if(!ktmail.match(txtmail)){
+      document.getElementById("errorEmail").innerHTML = "Nhập sai định dạng. Ví dụ: abc.@gmail.com";
+      mail.style.border = "1px solid red";
+      mail.style.backgroundColor = "yellow";
+    }
+    else{
+      document.getElementById("errorEmail").innerHTML = "";
+      mail.style.border = "1px solid black";
+      mail.style.backgroundColor = "white";
+    }
+  // Kiểm tra giới tính
+let gioitinh = document.getElementById("sex");
+let nam = document.getElementById("male").checked;
+let nu =  document.getElementById("female").checked;
+  if (nam == false && nu == false){
+    document.getElementById("errorSex").innerHTML = "Bạn phải chọn giới tính ";
+    gioitinh.style.border = "1px solid red";
+    gioitinh.style.backgroundColor = "yellow";
+  }
+  else{
+    document.getElementById("errorSex").innerHTML = "";
+    gioitinh.style.border = "1px solid black";
+    gioitinh.style.backgroundColor = "white";
+  }
+  // Kiểm tra checkbox
+  let hobbies = document.getElementById("sothich");
+  let sach = document.getElementById("book").checked;
+  let dulich = document.getElementById("travel").checked;
+  let amnhac = document.getElementById("music").checked;
+  let amthuc = document.getElementById("cook").checked;
+  let khac = document.getElementById("other").checked;
+    if(sach == false && dulich == false && amnhac == false && amthuc == false && khac == false){
+      document.getElementById("errorHobby").innerHTML = "Bạn phải chọn sở thích ";
+      hobbies.style.border = "1px solid red";
+      hobbies.style.backgroundColor = "yellow";
+      //document.getElementById("check_other").style.display = "none";
+    }
+    else{
+      //document.getElementById("check_other").style.display = "none";
+      document.getElementById("errorHobby").innerHTML = "";
+      hobbies.style.border = "1px solid black";
+      hobbies.style.backgroundColor = "white";
+    }
+  // Ghi chú không quá 300 ký tự
+  let ghichu = document.getElementById("note");
+    gc = ghichu.value;
+    if(gc.length > 300){
+        document.getElementById("errorNote").innerHTML ="Không được quá 300 ký tự";
+        ghichu.style.border = "1px solid red";
+        ghichu.style.backgroundColor = "yellow";
+      }
+      else{
+        document.getElementById("errorNote").innerHTML = "";
+        ghichu.style.border = "1px solid black";
+        ghichu.style.backgroundColor = "white";
+      }
+}
+let clickother = document.getElementById("other");
+let checkother = document.getElementById("check_other");
+checkother.style.display = "none";
+clickother.addEventListener("click", function () {
+    if (clickother.checked) {
+        checkother.style.display = "block";
+        //hobbies.style.border = "1px solid black";
+        //hobbies.style.backgroundColor = "white";
+    } else {
+        checkother.style.display = "none";
+    }
+})
+</script>
+</body>
+</html>

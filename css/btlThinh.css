@@ -1,0 +1,353 @@
+html{
+  font-family: 'Lato', sans-serif;
+  font-size: 20px;
+  box-sizing: unset !important;
+  box-sizing: border-box;
+}
+
+body{
+  margin: 0px;
+  background-color: #747474;
+}
+
+.container{
+  background-color: #747474;
+  padding: 0px !important;
+}
+
+
+/* -------------------------------------- */
+/* ----------------HEADER---------------- */
+/* ------------HEADER ANIMATION---------- */
+#animation{
+  position: relative;
+  width: 99.1vw;
+  height: 100vh;
+  opacity: 0.9;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+#bg-animation, #bg-animation-2{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+#bg-animation{
+  left: 0;
+  animation: bg-ani-1 15s linear infinite;
+}
+#bg-animation-2{
+  left: 100%;
+  animation: bg-ani-2 15s linear infinite;
+}
+@keyframes bg-ani-1{
+  from {left: 0;}
+  to {left: -100%;}
+}
+@keyframes bg-ani-2{
+  from {left: 100%;}
+  to {left: 0%;}
+}
+
+#duck{
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translate(-50%, -100%);
+  width: 50%;
+  animation-name: duck;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  animation: duck 5s infinite;
+}
+@keyframes duck{
+  0% {top: 100%;}
+  50% {top: 95%;}
+  100% {top: 100%;}
+}
+
+#city, #city-2{
+  width: 150%;
+  position: absolute;
+  top: 100%;
+  transform: translate(0%, -100%);
+}
+#city{
+  left: 0%;
+  animation: city 10s linear 0s infinite;
+}
+#city-2{
+  left: 149.5%;
+  animation: city-2 10s linear 0s infinite;
+}
+@keyframes city{
+  from {left: 0%;}
+  to{left: -149.5%;}
+}
+@keyframes city-2{
+  from {left: 149.5%;}
+  to{left: 0%;}
+}
+
+
+/* -------------------------------------- */
+/* -----------------NAV------------------ */
+/* -------------------------------------- */
+
+nav{
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 56px;
+  background-color: #272727;
+  z-index: 999;
+}
+nav>li{
+  display: inline-block;
+  padding: 20px 0 0 0;
+}
+nav>#home{
+  margin-top: 0px !important;
+  padding: 10px 0 10px 0;
+}
+nav>#home>a{
+  font-size: 30px;
+  font-weight: 700;
+  padding: 10px 20px 10px 20px;
+}
+nav>li>a{
+  text-decoration: none;
+  color: white;
+  padding: 20px 20px 12px 20px;
+}
+nav>li>a:hover{
+  background-color: white;
+  color: #747474;
+}
+
+/* -------------------------------------- */
+/* -----------------ARTICLE-------------- */
+/* -------------------------------------- */
+article{
+  margin-bottom: 50px;
+}
+.title-text>h1{
+  font-size: 200%;
+  text-align: center;
+  color: #ff652f;
+}
+.title-text>h1:after{
+  content: "";
+  width: 300px;
+  height: 2px;
+  background-image: linear-gradient(45deg, #ff652f 0%, #ffe400 100%);
+  display: block;
+  margin: 0 auto;
+}
+.title-text>p{
+  text-align: center;
+  color: #ffe400;
+}
+
+/* -------------------------------------- */
+/* ---------------Slide Show------------- */
+/* -------------------------------------- */
+#slide{
+  position: relative;
+  box-sizing: border-box;
+  width: 100%;
+  height: 600px;
+  padding: 0px;
+}
+
+.slide-show{
+  box-sizing: border-box;
+  width: 100%;
+  margin: 0 auto;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.slide{
+  box-sizing: border-box;
+  left: 0;
+  width: inherit;
+  height: inherit;
+  position: absolute;
+  transition: 1s ease-in-out;
+}
+.slide>img{
+  width: 100%;
+  height: inherit;
+}
+.slide>p{
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translate(-50%, -100%);
+  color: white;
+  margin: 0;
+  font-size: 40px;
+}
+.next, .previous{
+  font-size: 80px;
+  position: absolute;
+  color: white;
+  top: 50%;
+  left: 0%;
+  transform: translate(0%,-50%);
+  cursor: pointer;
+}
+.next{
+  left: 100%;
+  transform: translate(-100%,-50%);
+}
+.next:hover,
+.previous:hover{
+  color: gray;
+}
+/* -------------------------------------- */
+/* ------------------Form---------------- */
+/* -------------------------------------- */
+#form{
+  box-sizing: border-box;
+  position: relative;
+  width: 100%;
+  height: 1500px;
+  margin: 0 auto;
+  background-image: url(../img/bg-form.png);
+  background-size: cover;
+  background-position: center;
+}
+form{
+  width: 100%;
+  height: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgb(255, 255, 255,.7);
+  border-radius: 10px;
+  position: absolute;
+  padding: 15px;
+}
+form>h1{text-align: center;}
+input[type=text], select, textarea,
+#sex, #hobbies{
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  background-color: rgb(241, 241, 241, .7);
+  
+
+}
+input[type=text]:focus, select:focus, textarea:focus{
+  outline: none;
+}
+#sex>label, #hobbies>label{
+  padding-right: 20px;
+}
+#cancel, #sign{
+  margin-top: 10px;
+  width: 50%;
+  float: left;
+  height: 50px;
+  opacity: 1;
+  border: none;
+  cursor: pointer;
+}
+#cancel{
+  background-color: red;
+  color: white;
+}
+#sign{
+  background-color: green;
+  color: white;
+}
+.messError{
+  display: block;
+  margin-bottom: 20px;
+  color: red;
+}
+/* -------------------------------------- */
+/* ------------------Table--------------- */
+/* -------------------------------------- */
+#table{
+  box-sizing: border-box;
+  padding: 20px;
+  width: 100%;
+  background-color: gray;
+}
+
+table, th, td{
+  text-align: center;
+  border: 3px black;
+  border-style: double;
+  padding: 5px;
+}
+tr{
+  display: table-row;
+  background-color: #f3777e;
+  color: white;
+  font-weight: 500;
+  font-size: 20px;
+}
+tr[data-name=info]{
+  background-color: #EA151E;
+  font-size: 25px;
+}
+
+table{
+  width: 100%;
+  margin: 0px auto;
+  border-spacing: 5px;
+}
+input[type="number"]{
+  width: 100%;
+}
+input[type="checkbox"]{
+  transform: scale(1.5,1.5);
+}
+#header{
+  text-align: center;
+}
+#header>h1{
+  font-size: 50px;
+  color: white;
+}
+#header>select{
+  width: 100px;
+}
+#header>hr{
+  width: 80%;
+  border: 1px solid gray;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

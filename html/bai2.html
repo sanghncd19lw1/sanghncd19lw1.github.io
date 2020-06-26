@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../css/bai2.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BTL 2</title>
+</head>
+<body>
+  <article>
+    
+
+    <form onsubmit="return validForm()">
+        <div class="form-group">
+          <h3> ĐĂNG KÝ THÀNH VIÊN </h3>
+          <label for="exampleInputEmail1">MSSV</label>
+          <input type="text" class="text" id="maso" aria-describedby="emailHelp" placeholder="3001190019" name="mssv">
+          <p class="messError"></p>
+          <!--  messError có nghĩa là câu lệnh để bắt lỗi nó cũng là 1 cái lớp để khi có lỗi thì ta sẽ gọi nó ra thông báo cho ng dùng biết -->
+
+          <label for="exampleInputEmail1">Họ Tên </label>
+          <input type="text" class="text" id="mane" aria-describedby="emailHelp" placeholder="Hồ Thị Ngọc Sang" name="name">
+          <p class="messError"> </p>
+
+          <label for="exampleInputEmail1">Email </label>
+          <input type="text" class="text" id="email" aria-describedby="emailHelp" placeholder="ngocsang.itc@gmail.com" name="mail"> 
+          <p class="messError"></p>
+          <p class="messError1"></p>
+
+          <!--phần này là chọn giới tính nên ta sử dụng input type="radio">  -->
+          <div class="form-group "><!-- 2 -->
+            <label for="text">Giới tính</label> <br>
+            <div class="form-group  border rounded p-2" >
+              <div class="gt" id="gt">
+                <input type="radio" name="gt" id="male" autocomplete="off">
+                <label for="male">Nam</label>
+                <input type="radio" name="gt" id="female" autocomplete="off">
+                <label for="female">Nữ</label>
+              </div>
+            </div>
+            <p class="messError"> </p>
+            <!-- dòng này có nghĩa là khi ta ko chọn 1 trong 2 (nam or nữ) thì nó sẽ thông báo lỗi ko chọn-->
+          
+            <!-- muốn chọn được nhiều sở thích thì ta sẽ sử dụng checkbox trong input -->
+            <div class="form-group "><!-- 3 -->
+              <label for="enjoy">Sở thích</label> <br>
+              <div class="form-group  border rounded p-2" id="enjoy"><!-- p-2 có nghĩa là padding: 2px-->
+                <div class="like">
+                  <div class="love">
+                  <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1" name="st">
+                    <label class="form-check-label" for="inlineCheckbox1">Đọc sách</label>
+                  </div>
+                  <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2" name="st">
+                    <label class="form-check-label" for="inlineCheckbox2">Du lịch </label>
+                  </div>
+                  <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3" name="st">
+                    <label class="form-check-label" for="inlineCheckbox3">Âm nhạc </label>
+                  </div>
+                  <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="checkbox" id="inlineCheckbox4" value="option3" name="st" >
+                    <label class="form-check-label" for="inlineCheckbox3">Ẩm thực </label>
+                  </div>
+                  </div>
+                
+
+                <div class="other-enjoy">
+                  <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="text" id="inlineCheckbox5" value="option3" name="enjoy">
+                    <label class="form-check-label" for="inlineCheckbox3">Khác </label>
+                  </div>
+                </div>
+                </div>
+              </div><!-- form-group 3  -->
+              <p class="messError"> </p>
+
+
+              <div class="form-group "> <!-- 4-->
+                <label for="text" id="quoctich">Quốc tịch</label> <br>
+                  <select name="" id="loaiSV" class="form-control">
+                    <option>Chọn quốc tịch</option>
+                    <option>Việt Nam</option>
+                    <option>Lào</option>
+                    <option>Campuchia</option>
+                    <option>Thái Lan </option>
+                  </select>
+            </div><!-- form-group 4  -->
+          </div><!-- form-group 1  -->
+
+          <div class="form-group">
+            <label for="note" id="note">Ghi chú</label>
+            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+            <p class="messError"> </p>
+          </div>
+
+          <button type="button" class="btn btn-outline-danger">Đăng ký</button>
+          <button type="button" class="btn btn-outline-success"> Hủy </button>
+        </div>
+        </div>
+      </form>
+  </article>
+  
+
+
+
+
+
+  <script src="../js/bai2.js"></script>
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+</body>
+</html>

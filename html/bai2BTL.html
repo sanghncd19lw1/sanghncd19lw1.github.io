@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <!-- <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;900&amp;display=swap" rel="stylesheet"> -->
+  <link rel="stylesheet" href="../css/bai2BTL.css">
+  <title>Bài 2 BTLT </title>
+</head>
+<body>
+
+    <nav>
+        <ul>
+          <li><a href="../index.html"><i class="fas fa-home" style="font-size:16px"></i>   Home  </a></li>
+          <li><a href="../html/bai1.html"><i class="fas fa-paper-plane" style="font-size:16px"></i>   Contact </a></li>
+          <li><a href="../html/bai2BTL.html"><i class="fas fa-address-book" style="font-size:16px"></i>   Introduction  </a></li>
+          <li><a href="../html/bai3btl.html"><i class="fas fa-pencil-alt" style="font-size:16px"></i>   Homework  </a></li>
+          <li><a href="#"><i class="fas fa-edit" style="font-size:16px"></i>   Product  </a></li>
+        
+        <!-- <form action="action_page.php" class="f-right">
+            <input type="text" class="search" placeholder="Tìm Kiếm"> 
+            <i class="fa fa-search" aria-hidden="true" style="font-size:20px"> </i>
+          
+        </form> -->
+      </ul>
+      </nav>
+
+  <div class="container">
+    <section id="form">
+        <form onsubmit="return validForm()">
+            <h1>ĐĂNG KÝ THÀNH VIÊN</h1><br>
+            <label for="mssv">Mã sinh viên</label><br>
+            <input id="mssv" type="text" name="mssv" title="Mã Sinh Viên Của Bạn " >
+            <span class="messError" data-name="mssv"></span>
+
+            <label for="name">Họ và tên</label><br>
+            <input id="name" type="text" name="name" title="Họ Tên của bạn là gì ">
+            <span class="messError" data-name="name"></span>
+
+            <label for="mail">Email</label><br>
+            <input id="mail" type="text" name="mail" title="điền mail phải có @gmail.com nhé bạn ">
+            <span class="messError" data-name="mail"></span>
+
+            <label for="gt">Giới tính</label><br>
+            <div id="gt" name="gt">
+                <input type="radio" name="sex" id="male" >
+                <label for="male">Nam</label>
+                <input type="radio" name="sex" id="female" >
+                <label for="female">Nữ</label>
+            </div>
+            <span class="messError" data-name="sex"></span>
+
+            <label for="like" name="enjoy">Sở thích</label><br>
+            <div id="hobbies">
+                <input type="checkbox" name="enjoy" id="book" >
+                <label for="book">Đọc sách</label>
+
+                <input type="checkbox" name="enjoy" id="travel" >
+                <label for="travel">Du lịch</label>
+
+                <input type="checkbox" name="enjoy" id="music" >
+                <label for="music">Nghe nhạc</label>
+
+                <input type="checkbox" name="enjoy" id="food" >
+                <label for="food">Ẩm thực</label>
+
+                <input type="checkbox" name="enjoy" id="other-hobby" >
+                <label for="other-hobby">Khác</label>
+            </div>
+
+            <div id="other-checked" style="display: none;">
+                <label>Sở thích khác của bạn là gì:</label>
+                <input type="text" name="hobby" title="Hãy điền sở thích khác vào đây " >
+            </div>
+            <span class="messError" data-name="enjoy"></span>
+
+            <label for="national">Quốc Tịch</label><br>
+            <select name="national">
+                <option>
+                    Việt Nam
+                </option>
+                <option>
+                    Thái Lan
+                </option>
+                <option>
+                    Campuchia
+                </option>
+                <option>
+                    Nhật Bản
+                </option>
+            </select><br>
+            <p></p>
+
+            <label for="note">Ghi Chú</label><br>
+            <textarea name="note" rows="3" id="note"></textarea>
+            <span class="messError" data-name="note"></span>
+
+            <div>
+                <button type="submit" class="btn btn-outline-danger"  > Đăng Ký</button>
+            </div>
+
+            
+
+        </form>
+    </section>
+  </div>
+
+
+    <script src="../js/bai2BTL.js"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+</body>
+</html>

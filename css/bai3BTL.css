@@ -1,0 +1,50 @@
+#table{
+  box-sizing: border-box;
+  padding: 20px;
+  width: 100%;
+  background-color: gray;
+}
+
+table, th, td{
+  text-align: center;
+  border: 3px black;
+  border-style: double;
+  padding: 5px;
+}
+tr{
+  display: table-row;
+  background-color: #f3777e;
+  color: white;
+  font-weight: 500;
+  font-size: 20px;
+}
+tr[data-name=info]{
+  background-color: #EA151E;
+  font-size: 25px;
+}
+
+table{
+  width: 100%;
+  margin: 0px auto;
+  border-spacing: 5px;
+}
+input[type="number"]{
+  width: 100%;
+}
+input[type="checkbox"]{
+  transform: scale(1.5,1.5);
+}
+#header{
+  text-align: center;
+}
+#header>h1{
+  font-size: 50px;
+  color: white;
+}
+#header>select{
+  width: 100px;
+}
+#header>hr{
+  width: 80%;
+  border: 1px solid gray;
+}

@@ -1,0 +1,22 @@
+html,body
+{
+    margin: 0 ;
+    padding: 0;
+}
+article{
+  margin: 30px  300px 0 300px;
+}
+
+
+
+
+.like
+{
+  border: 1px solid green;
+}
+
+.other-enjoy 
+{
+  border: 1px solid red;
+  width: 100px;
+}

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/bt3btl.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous"> 
+    <title> Bài Tập 3 BTL </title>
+</head>
+<body>
+
+
+    <nav>
+        <ul>
+          <li><a href="../index.html"><i class="fas fa-home" style="font-size:16px"></i>   Home  </a></li>
+          <li><a href="../html/bai1.html"><i class="fas fa-paper-plane" style="font-size:16px"></i>   Contact </a></li>
+          <li><a href="../html/bai2BTL.html"><i class="fas fa-address-book" style="font-size:16px"></i>   Introduction  </a></li>
+          <li><a href="../html/bai3btl.html"><i class="fas fa-pencil-alt" style="font-size:16px"></i>   Homework  </a></li>
+          <li><a href="#"><i class="fas fa-edit" style="font-size:16px"></i>   Product  </a></li>
+        
+        <form action="action_page.php" class="f-right">
+            <input type="text" class="search" placeholder="Tìm Kiếm"> 
+            <i class="fa fa-search" aria-hidden="true" style="font-size:20px"> </i>
+          
+        </form>
+      </ul>
+      </nav>
+
+<!-- Bai Tap Lon  -->
+    <div class="card text-center my-5">
+        <div class="card-header text-uppercase text-center">
+            <h3>BÁN HÀNG</h3>
+            <div class="form-group w-25 m-auto">
+                <select name="" id="SapXepGia" class="form-control">
+                    <option>Mức giá</option>
+                    <option>200</option>
+                    <option>400</option>
+                    <option>600</option>
+                    <option>800</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="card-body">
+            <table class="table table-bordered">
+                <thead>
+                    <tr data-name="all" style="display: table-row;">
+                        <th scope="col">
+                            <!-- <input type="checkbox" name="" id=""> -->
+                        </th>
+                        <th scope="col">Hàng hóa</th>
+                        <th scope="col">Đơn giá</th>
+                        <th scope="col">Số lượng</th>
+                        <th scope="col">Thành tiền</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr style="display: table-row;">
+                        <td scope="row">
+                            <input type="checkbox" name="" id="">
+                        </td>
+                        <td class="HangHoa">Iphone 9</td>
+                        <td class="DonGia">700</td>
+                        <td><input type="text" name="" id="" value="0"></td>
+                        <td class="ThanhTien"></td>
+                    </tr>
+                    <tr style="display: table-row;">
+                        <td scope="row">
+                            <input type="checkbox" name="" id="">
+                        </td>
+                        <td class="HangHoa">Samsung</td>
+                        <td class="DonGia">400</td>
+                        <td><input type="text" name="" id="" value="0"></td>
+                        <td class="ThanhTien">400</td>
+                    </tr>
+                    <tr style="display: table-row;">
+                        <td scope="row">
+                            <input type="checkbox" name="" id="">
+                        </td>
+                        <td class="HangHoa">Nokia</td>
+                        <td class="DonGia">100</td>
+                        <td><input type="text" name="" id="" value="0"></td>
+                        <td class="ThanhTien"></td>
+                    </tr>
+                    <tr style="display: table-row;">
+                        <td scope="row">
+                            <input type="checkbox" name="" id="">
+                        </td>
+                        <td class="HangHoa"> Sony</td>
+                        <td class="DonGia">450</td>
+                        <td><input type="text" name="" id="" value="0"></td>
+                        <td class="ThanhTien"></td>
+                    </tr>
+                    <tr style="display: table-row;">
+                        <td scope="row">
+                            <input type="checkbox" name="" id="">
+                        </td>
+                        <td class="HangHoa">Motorola</td>
+                        <td class="DonGia">180</td>
+                        <td><input type="text" name="" id="" value="0"></td>
+                        <td class="ThanhTien"></td>
+                    </tr>
+                    <tr style="display: table-row;" data-price="600">
+                        <td scope="row">
+                            <input type="checkbox" name="" id="">
+                        </td>
+                        <td class="HangHoa">Oppo</td>
+                        <td class="DonGia">600</td>
+                        <td><input type="text" name="" id="" value="0"></td>
+                        <td class="ThanhTien"></td>
+                    </tr>
+                    <tr style="display: table-row;" data-price="90">
+                        <td scope="row">
+                            <input type="checkbox" name="" id="">
+                        </td>
+                        <td class="HangHoa"> Bphone</td>
+                        <td class="DonGia">90</td>
+                        <td><input type="text" name="" id="" value="0"></td>
+                        <td class="ThanhTien">180</td>
+                    </tr>
+                    <tr data-name="total" style="display: table-row;">
+                        <td scope="row" colspan="4" class="font-weight-bold">Tổng</td>
+                        <td class="Tong"> </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        
+    </div>
+
+    <script src="../js/bt3btl.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+</body>
+</html>

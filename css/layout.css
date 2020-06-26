@@ -1,0 +1,16 @@
+body{
+    width: 1365px;
+    height: auto;
+    min-height: 300px;
+    min-width: 300px;
+    margin: 0;
+    padding: 0;
+    background-color: red;
+}
+/* ------------------------header ------------------------ */
+header{
+    width: 1365px;
+    height: 600px;
+    background-color: burlywood;
+}
+

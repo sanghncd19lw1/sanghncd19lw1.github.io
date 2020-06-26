@@ -1,0 +1,59 @@
+ul {
+    list-style-type: none; /*kiểu danh sách là không */
+    margin: 0;
+    padding: 0;
+  }
+  
+  li {
+    display: inline; /* trưng bày hay còn gọi là bày biện trên 1 dòng (inline)* block(khối)*/
+  }
+  
+  ul {
+    list-style-type: none;/*kiểu danh sách là không */
+    margin: 0;
+    padding: 0;
+    overflow: hidden; /* tràn ra: ẩn */
+    background-color:rgb(73, 232, 243);
+    position: fixed ; /* chức vụ bất biến hoặc là cố định thanh menu */
+    top: 0;
+    z-index: 999;
+    width: 100%;
+  }
+  
+  li {
+    float: left;
+  }
+  
+  li a {
+    display: block; /* *trung bày thành khối nếu sử dụng inline thì cái thanh menu rất nhỏ*/
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none; /*không trang trí văn bản */
+  }
+  
+  li a:hover {
+    background-color: #111;
+  }
+  
+  .f-right{
+    /* border: 1px solid yellow; */
+    margin-top: 10px; /* top là trên   */
+    float: right;
+    margin-right: 40px;
+  }
+  .search{
+    width: 250px;
+    height: 32px;
+    border: 1px solid rgb(73, 232, 243);
+    border-radius: 5px;
+  }
+  
+  .fa-search{
+    color: white;
+    padding-left: 15px;
+  }
+  
+
+th
+{ border: 1px solid red;}

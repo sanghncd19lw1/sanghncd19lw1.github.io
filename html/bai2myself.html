@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link>
+  <title>bài 2 myself </title>
+</head>
+<body>
+  <!-- card 1 -->
+  
+    <div class="card-header text-uppercase text-center">
+      <h3>
+        đăng kí thành viên
+      </h3>
+    </div>
+    <div class="card-body">
+      <form action="" class="w-50">            
+        <div class="form-group">
+          <label for="">Mã sinh Viên : </label>
+          <input type="text" class="form-control" id="txtMaSV" placeholder="2020CK21">
+      </div>
+      <div class="form-group">
+          <label for="">Tên sinh Viên : </label>
+          <input type="text" class="form-control" id="txtTenSV">
+      </div>
+      <div class="form-group">
+        <label for="">Email</label>
+        <input type="email" class="form-control" name="mail" id="mail" aria-describedby="emailHelpId" placeholder="">
+      </div>
+
+
+      <div class="form-group">
+        <label for="">Giới tính</label> <br>
+        <div class="border rounded bg-white py-2">
+          <div class="form-check form-check-inline ml-2">
+            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
+            <label class="form-check-label" for="exampleRadios1">
+              Nam
+            </label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
+            <label class="form-check-label" for="exampleRadios2">
+              Nữ
+            </label>
+          </div>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="">Sở thích</label> <br>
+        <div class="border rounded bg-white py-2">
+          <div class="form-check form-check-inline ml-2">
+            <input class="form-check-input " type="checkbox" id="inlineCheckbox1" value="option1">
+            <label class="form-check-label" for="inlineCheckbox1">Đọc sách</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
+            <label class="form-check-label" for="inlineCheckbox2">Du lịch</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3">
+            <label class="form-check-label" for="inlineCheckbox3">Âm nhạc</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="checkbox" id="inlineCheckbox4" value="option4">
+            <label class="form-check-label" for="inlineCheckbox3">Ẩm thực</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="checkbox" id="inlineCheckbox5" value="option5">
+            <label class="form-check-label" for="inlineCheckbox3">Khác</label>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="form-group">
+          <label for="">Quốc tịch :</label>
+          <select name="" id="quocTich" class="form-control">
+            <option>Chọn quốc tịch</option>
+            <option>Việt Nam</option>
+            <option>Đông Lào</option>
+            <option>Đại Việt</option>
+          </select>
+      </div>
+
+      <div class="form-group">
+        <label for="exampleFormControlTextarea1">Ghi chú</label>
+        <textarea class="form-control" id="ghiChu" rows="5"></textarea>
+      </div>
+      <div class="form-group text-center">
+        <button id="dangKy" type="button" class="btn btn-primary">Đăng Ký</button>
+      </div>
+
+
+  <script src="../js/bai2myself.js"></script>
+
+</body>
+</html>
